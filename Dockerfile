@@ -9,7 +9,7 @@ COPY . /app
 RUN make build
 
 # production stage
-FROM alpine as production
+FROM alpine:3.18.3 as production
 
 WORKDIR /app
 COPY ./conf/ /app/conf
